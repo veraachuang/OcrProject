@@ -1,0 +1,17 @@
+{
+  "VendorName": "VERTEX",
+  "CustomerName": "",
+  "Items": [
+    {
+      "Description": "LENOVO Legion Pro5 16IRX8 (82WK001FHH) 17-13700HX/16GB (8\u002B8)/1TB SSD/16\u0022\nWQXGA (2560x1600)/RTX4060-8G/W11 HOME/3Y Legion Ultimate Support\nS/N#: SPF4CYJ9W",
+      "Amount": "$14600 HKD",
+      "UnitPrice": "$14600 HKD"
+    },
+    {
+      "Description": "CRUCIAL 32GB DDR5-5200 SODIMM CL42 FOR NOTEBOOK (CT32G52C42S5)\nS/N#: 184BM058",
+      "Amount": "$880 HKD",
+      "UnitPrice": "$880 HKD"
+    }
+  ],
+  "InvoiceTotal": "$15480 HKD"
+}
