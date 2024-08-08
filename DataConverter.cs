@@ -1,11 +1,18 @@
+using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Azure.AI.FormRecognizer.DocumentAnalysis;
 
 namespace OcrProject;
 
 public class DataConverter
 {
-    public static void Convert(AnalyzedDocument document, InvoiceFields data)
+    private static readonly string OutputPath = "/Users/toponaute/Documents/GitHub/OcrProject/outputs";
+
+    public static InvoiceFields Convert(AnalyzedDocument document)
     {
+        var data = new InvoiceFields();
+        
         data.VendorName = SetValue(document.Fields, nameof(InvoiceFields.VendorName));
         data.CustomerName = SetValue(document.Fields, nameof(InvoiceFields.CustomerName));
 
@@ -31,6 +38,8 @@ public class DataConverter
         data.Subtotal = SetCurrency(document.Fields, nameof(InvoiceFields.Subtotal));
         data.TotalTax = SetCurrency(document.Fields, nameof(InvoiceFields.TotalTax));
         data.InvoiceTotal = SetCurrency(document.Fields, nameof(InvoiceFields.InvoiceTotal));
+
+        return data;
     }
     
     private static string SetValue(IReadOnlyDictionary<string, DocumentField> fields, string key)
@@ -53,5 +62,23 @@ public class DataConverter
         {
             CurrencyValue = $"{currency.Symbol}{currency.Amount} {currency.Code}"
         };
+    }
+
+    public static async Task WriteJsonFile(string fileName, IReadOnlyList<InvoiceFields> data)
+    {
+        var options = new JsonSerializerOptions
+        {
+            WriteIndented = true,
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
+            Converters = { new CurrencyConverter() }
+        };
+        for(var i = 0; i < data.Count; i++)
+        {
+            var jsonString = JsonSerializer.Serialize(data, options);
+
+            var outputJsonPath = $"{OutputPath}/{fileName}_{i}.json";
+            await File.WriteAllTextAsync(outputJsonPath, jsonString);
+            Console.WriteLine(outputJsonPath);
+        }
     }
 }

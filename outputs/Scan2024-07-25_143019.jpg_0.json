@@ -1,27 +1,29 @@
-{
-  "VendorName": "2000Fun\n\u89C0\u5858\u9580\u5E02",
-  "CustomerName": "",
-  "Items": [
-    {
-      "Description": "[PD-30154]SteelSeries Arctis Nova Pro Wireless ANC 2.4G\u53CA\u85CD\u7259 \u7121\u7DDA\u8033\u6A5F(PS5-\u65B0\u5305\u88DD\u7248)\n6152245313242300029",
-      "Amount": "$2999 TWD",
-      "UnitPrice": "$2999 TWD"
-    },
-    {
-      "Description": "\u8D08\u54C1\u3011[PD-13748]SteelSeries Rival 105 RGB \u904A\u6232\u6ED1\u9F20(62415)",
-      "Amount": "$0 TWD",
-      "UnitPrice": "$0 TWD"
-    },
-    {
-      "Description": "\u8D08\u54C1\u3011[PD-24742]SteelSeries \u7121\u7DDA\u8033\u6A5F\u96FB\u6C60\u5305(For Arctis Nova)",
-      "Amount": "$0 TWD",
-      "UnitPrice": "$0 TWD"
-    },
-    {
-      "Description": "\u8D08\u54C1\u3011[PD-23806]SteelSeries HS1 \u92C1\u5408\u91D1\u8033\u6A5F\u67B6(60141)",
-      "Amount": "$0 TWD",
-      "UnitPrice": "$0 TWD"
-    }
-  ],
-  "InvoiceTotal": "$2999 TWD"
-}
+[
+  {
+    "VendorName": "2000Fun\n\u89C0\u5858\u9580\u5E02",
+    "CustomerName": "",
+    "Items": [
+      {
+        "Description": "[PD-30154]SteelSeries Arctis Nova Pro Wireless ANC 2.4G\u53CA\u85CD\u7259 \u7121\u7DDA\u8033\u6A5F(PS5-\u65B0\u5305\u88DD\u7248)\n6152245313242300029",
+        "Amount": "$2999 TWD",
+        "UnitPrice": "$2999 TWD"
+      },
+      {
+        "Description": "\u8D08\u54C1\u3011[PD-13748]SteelSeries Rival 105 RGB \u904A\u6232\u6ED1\u9F20(62415)",
+        "Amount": "$0 TWD",
+        "UnitPrice": "$0 TWD"
+      },
+      {
+        "Description": "\u8D08\u54C1\u3011[PD-24742]SteelSeries \u7121\u7DDA\u8033\u6A5F\u96FB\u6C60\u5305(For Arctis Nova)",
+        "Amount": "$0 TWD",
+        "UnitPrice": "$0 TWD"
+      },
+      {
+        "Description": "\u8D08\u54C1\u3011[PD-23806]SteelSeries HS1 \u92C1\u5408\u91D1\u8033\u6A5F\u67B6(60141)",
+        "Amount": "$0 TWD",
+        "UnitPrice": "$0 TWD"
+      }
+    ],
+    "InvoiceTotal": "$2999 TWD"
+  }
+]
